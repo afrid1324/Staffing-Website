@@ -1,0 +1,7 @@
+<!-- public/favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Red rounded square background -->
+  <rect width="256" height="256" rx="56" fill="#d90429"/>
+  <!-- Yellow triangle -->
+  <polygon points="128,56 196,200 60,200" fill="#ffd60a"/>
+</svg>
