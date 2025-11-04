@@ -1,0 +1,126 @@
+/* ---------- Base ---------- */
+:root{
+  --bg: #0f1221;
+  --bg-alt:#131735;
+  --card:#0f142a;
+  --text:#e9ecf2;
+  --muted:#aab1c4;
+  --brand:#6aa5ff;
+  --brand-2:#89f7fe;
+  --line:#242947;
+  --success:#40d37a;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--text);
+  background:linear-gradient(180deg,#090c1a, #0e1330 40%, #0b1030);
+  font:16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+
+/* ---------- Layout helpers ---------- */
+.container{width:min(1100px,92%);margin-inline:auto}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.fine{color:var(--muted);font-size:.875rem}
+.lead{font-size:1.15rem;color:var(--muted)}
+.section{padding:64px 0}
+.section--alt{background:linear-gradient(180deg,transparent,rgba(255,255,255,0.02))}
+.grid{display:grid;gap:28px}
+.grid--2{grid-template-columns:1.2fr 1fr}
+.grid--3{grid-template-columns:repeat(3,1fr)}
+@media (max-width: 960px){
+  .grid--2,.grid--3{grid-template-columns:1fr}
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter:saturate(140%) blur(8px);
+  background:rgba(9,12,26,.65);
+  border-bottom:1px solid var(--line);
+}
+.header-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:.6rem;align-items:center;color:var(--text);text-decoration:none;font-weight:700;font-size:1.05rem}
+.logo-dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 0 24px rgba(106,165,255,.7)}
+.nav{display:flex;gap:18px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover{color:#fff}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;cursor:pointer;border:1px solid var(--line);
+  color:#fff;text-decoration:none;border-radius:10px;padding:.7rem 1rem;font-weight:600;
+  background:rgba(255,255,255,.02);
+}
+.btn--sm{padding:.45rem .75rem;font-size:.9rem}
+.btn--ghost{background:transparent}
+.btn--primary{
+  border-color:transparent;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#0b1028;
+}
+.btn--block{display:block;width:100%}
+.btn--primary:hover{filter:saturate(120%)}
+
+/* ---------- Hero ---------- */
+.hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}
+.hero-copy h1{margin:0 0 12px;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.25}
+.hero-cta{display:flex;gap:12px;margin:18px 0 8px}
+.badges{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0 0;padding:0;list-style:none}
+
+.hero-card .card{margin-top:6px}
+.card{
+  background:linear-gradient(180deg,#0c1330,#0a122b);
+  border:1px solid var(--line);
+  border-radius:16px;padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.card-title{margin:0 0 6px}
+.checklist{margin:10px 0 16px;padding-left:18px}
+.checklist li{margin:6px 0}
+.fine.center{text-align:center}
+
+/* ---------- About ---------- */
+.list{margin:10px 0 0;padding-left:18px}
+.about-stats{display:grid;gap:16px;align-content:start}
+.stat{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:18px}
+.stat-number{display:block;font-weight:700;font-size:1.5rem}
+.stat-label{color:var(--muted)}
+
+/* ---------- Cards / Services ---------- */
+.cards{margin-top:18px}
+.card--service h3{margin:.2rem 0}
+.bullets{margin:10px 0 0;padding-left:18px}
+.card--pricing{text-align:center}
+.card--pricing .price{font-size:2rem;margin:.35rem 0 .5rem}
+.price-currency{opacity:.9}
+.price-unit{font-size:1rem;color:var(--muted)}
+.card--highlight{outline:2px solid rgba(137,247,254,.5)}
+
+/* ---------- Quotes ---------- */
+.quotes{margin-top:12px}
+.quote{
+  border-left:3px solid var(--brand);padding:14px 16px;background:var(--card);border-radius:8px;
+}
+.quote p{margin:.2rem 0}
+.quote footer{color:var(--muted);font-size:.9rem;margin-top:.3rem}
+
+/* ---------- Contact ---------- */
+.contact-list{margin:10px 0 20px;padding-left:18px}
+.contact-card .form{display:grid;gap:12px}
+.field{display:grid;gap:6px}
+.field input,.field select{
+  width:100%;padding:.7rem .8rem;border-radius:10px;border:1px solid var(--line);
+  background:#0e1430;color:var(--text)
+}
+.field input:focus,.field select:focus{outline:2px solid rgba(106,165,255,.5)}
+
+/* ---------- Footer ---------- */
+.site-footer{border-top:1px solid var(--line);padding:26px 0;margin-top:20px;background:rgba(9,12,26,.5)}
+.footer-wrap{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.footer-nav{display:flex;gap:14px}
+.footer-nav a{color:var(--muted);text-decoration:none}
+.footer-nav a:hover{color:#fff}
